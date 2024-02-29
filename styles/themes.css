@@ -1,0 +1,54 @@
+/* В этом файле вы опишете значения переменных в разных цветовых схемах.
+Придерживайтесь такого именования классов:
+✦ theme-dark — класс тёмной темы
+✦ theme-light — класс светлой темы
+✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
+*/
+:root.theme-light {
+    --background-color: #FFFFFF;
+    --text-color: #000000;
+    --border-color: #000000;
+    --page-font-femily-inter: "Inter";
+    --page-font-femily-PressStart2P: "PressStart2P";
+    --main-font-weight: 400;
+    --titles-font-weight: 700;
+    --background-image: repeating-linear-gradient(
+        to right, #d3d3d3 0px 2px, transparent 2px 4px),
+    repeating-linear-gradient(to bottom, #d3d3d3 0px 2px, transparent 2px 4px),
+    linear-gradient(#e7e7e7 0.01%, #1a1a1a);
+    --text-shadow-color: #ffffff;
+    --main-font-size: 18px;
+    --label-font-size: 14px;
+    --label-color: #000000;
+    --label-text-shadow: #FFFFFF;
+    --background-button: #FFFFFF;
+    --button-text-color: #FFFFFF;
+    --icon-heart-contour-color: #000000;
+    --icon-heart-sparks-color: #FF0000;
+    --icon-heart-main-body-color: #000000;
+    --icon-heart-core-color: #000000;
+}
+
+
+:root.theme-dark {
+    --background-color: #000000;
+    --text-color: #00CC14;
+    --border-color: #00CC14;
+    --main-font-weight: 465;
+    --titles-font-weight: 785;
+    --background-image: repeating-linear-gradient(
+        to right, #000 0px 2px, transparent 2px 4px), 
+    repeating-linear-gradient(to bottom, #d3d3d3 0px 2px, transparent 2px 4px),
+    linear-gradient(#007f0c, #004306);
+    --text-shadow-color: #000000;
+    --main-font-size: 18px;
+    --label-font-size: 14px;
+    --label-color: #000000;
+    --label-text-shadow: #FFFFFF;
+    --background-button: #000000;
+    --button-text-color: #00cc14;
+    --icon-heart-contour-color: #00CC14;
+    --icon-heart-sparks-color: #FF0000;
+    --icon-heart-main-body-color: #000000;
+    --icon-heart-core-color: #000000;
+}
