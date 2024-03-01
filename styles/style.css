@@ -220,7 +220,7 @@
   max-block-size: 38px;
 }
 
-.card__icon-button {
+.card__icon-button:focus {
   outline: none;
 }
 
