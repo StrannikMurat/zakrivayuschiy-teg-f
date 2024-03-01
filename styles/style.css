@@ -30,7 +30,7 @@
 .list__card {
   display: flex;
   flex-direction: column;
-  gap: 47px;
+  gap: 53px;
 }
 
 .header {
@@ -38,11 +38,11 @@
   flex-direction: column;
   align-items: center;
   justify-content: end;
-  min-block-size: 326px;
   border: 2px solid var(--border-color);
   background-color: var(--background-color);
   inline-size: 100%;
   padding-block-end: 19px;
+  padding-block-start: 120px;
   margin-block-end: 100px;
 }
 
@@ -50,7 +50,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 21px;
 }
 
 .header__teg-title {
@@ -73,7 +73,7 @@
 .theme-menu__list {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 9px;
 }
 
 .theme-menu__button {
@@ -104,7 +104,7 @@
 }
 
 .theme-menu__button::after {
-  content: '';
+  content: "";
   display: block;
   width: 0%;
   height: 3px;
@@ -119,6 +119,13 @@
 .theme-menu__button:focus-visible::after {
   width: 100%;
   transform: scale(1);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 53px;
+  padding-block-end: 100px;
 }
 
 .list__card-item {
@@ -136,9 +143,15 @@
 
 .image__wrapper {
   position: relative;
+  border-block-start: 2px solid var(--border-color);
+  border-block-end: 2px solid var(--border-color);
+  min-block-size: 375px;
 }
 
-@supports((text-stroke: 1px var(--label-text-shadow)) or (-webkit-text-stroke: 1px var(--label-text-shadow))) {
+@supports (
+  (text-stroke: 1px var(--label-text-shadow)) or
+    (-webkit-text-stroke: 1px var(--label-text-shadow))
+) {
   .image__label {
     -webkit-text-stroke: 1px var(--label-text-shadow);
     text-stroke: 1px var(--label-text-shadow);
@@ -162,7 +175,9 @@
 }
 
 .card__image {
+  display: block;
   inline-size: 100%;
+  block-size: 100%;
   object-fit: cover;
   object-position: center;
 }
@@ -170,8 +185,8 @@
 .article__text-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 27px;
-  padding: 25px;
+  gap: 26px;
+  padding: 26px;
 }
 
 .article__text {
@@ -180,7 +195,7 @@
   font-weight: var(--main-font-weight);
   color: var(--text-color);
   line-height: 21px;
-  padding-inline-end: 2px;
+  text-align: left;
 }
 
 .align__padding__small-screen {
@@ -193,19 +208,19 @@
 
 .card__button-wrapper {
   display: flex;
-  gap: 2px;
   justify-content: end;
   padding-inline-end: 25px;
-  padding-block-end: 20px;
+  padding-block-end: 21px;
 }
 
 .card__icon-button {
   border: 2px solid transparent;
   background-color: transparent;
   cursor: pointer;
+  max-block-size: 38px;
 }
 
-.card__icon-button:focus {
+.card__icon-button {
   outline: none;
 }
 
@@ -215,23 +230,25 @@
 }
 
 .card__like-button {
-  padding: 0 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: box-shadow 0.3s ease;
   max-block-size: 38px;
+  min-inline-size: 130px;
+  max-inline-size: 130px;
 }
 
 .card__like-button:focus {
   outline: none;
+}
+
+.card__like-button:focus-visible {
   box-shadow: 2px 2px 0 var(--border-color);
 }
 
 .sparks {
   opacity: 0;
-}
-
-.footer {
-  min-block-size: 231px;
-  padding-block-start: 48px;
 }
 
 .footer__button {
@@ -242,12 +259,15 @@
   gap: 8px;
   min-inline-size: 306px;
   min-block-size: 80px;
-  margin: 0 auto; 
+  margin: 0 auto;
   transition: box-shadow 0.3s ease;
 }
 
 .footer__button:focus {
   outline: none;
+}
+
+.footer__button:focus-visible {
   box-shadow: 2px 2px 0 var(--border-color);
 }
 
@@ -300,9 +320,11 @@ dialog::backdrop {
 dialog[open] {
   display: flex;
   flex-direction: column;
+  background-color: var(--dialog-back-color);
   gap: 30px;
   min-width: 341px;
   padding: 32px 42px;
+  border: 2px solid var(--border-color);
 }
 
 .modal__descroption {
@@ -317,11 +339,29 @@ dialog[open] {
   font-size: 14px;
   line-height: 21px;
   max-width: 198px;
+  text-transform: uppercase;
+  color: var(--text-color);
+}
+
+.modal__text {
+  text-transform: uppercase;
+}
+
+.modal__icon {
+  color: var(--text-color);
 }
 
 .dialog-button {
-  padding-block-start: 12.5px;
-  padding-block-end: 12.5px;
+  padding-block-start: 9px;
+  padding-block-end: 9px;
+}
+
+.dialog-button:focus {
+  outline: none;
+}
+
+.dialog-button:focus-visible {
+  box-shadow: 2px 2px 0 var(--border-color);
 }
 
 .brightness {
@@ -363,8 +403,8 @@ dialog[open] {
   }
 
   .header {
+    padding-block-start: 147px;
     margin-block-end: 100px;
-    min-block-size: 368px;
     gap: 25px;
   }
 
@@ -372,10 +412,29 @@ dialog[open] {
     gap: 28px;
   }
 
+  .image__label {
+    inset-inline-end: 25px;
+    inset-block-start: 26px;
+  }
+
   .footer__button {
     flex-direction: row;
     min-inline-size: 337px;
     min-height: 55px;
   }
-}
 
+  .footer__button-icon {
+    block-size: 21px;
+    inline-size: 21px;
+  }
+
+  dialog[open] {
+    min-inline-size: 357px;
+    padding: 32px 32px;
+  }
+
+  .modal__descroption {
+    justify-content: flex-start;
+    gap: 20px;
+  }
+}
