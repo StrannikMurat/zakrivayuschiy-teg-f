@@ -587,22 +587,22 @@
         </svg>
         <span class="button__text">Сохранить на память</span>
       </button>
+      <dialog class="modal" id="dialog-id">
+        <div class="modal__descroption">
+          <svg class="modal__icon" width="39" height="39" viewBox="0 0 28 28">
+            <use href="./svg/floppy.svg#floppy"></use>
+          </svg>
+          <h2 class="modal__title">Вставьте дискету, чтобы продолжить</h2>
+        </div>
+        <button
+          type="button"
+          class="modal__button dialog-button button"
+          onclick="window['dialog-id'].close()"
+        >
+          <span class="button__text modal__text">ok</span>
+        </button>
+      </dialog>
     </main>
-    <dialog class="modal" id="dialog-id">
-      <div class="modal__descroption">
-        <svg class="modal__icon" width="39" height="39" viewBox="0 0 28 28">
-          <use href="./svg/floppy.svg#floppy"></use>
-        </svg>
-        <h2 class="modal__title">Вставьте дискету, чтобы продолжить</h2>
-      </div>
-      <button
-        type="button"
-        class="modal__button dialog-button button"
-        onclick="window['dialog-id'].close()"
-      >
-        <span class="button__text modal__text">ok</span>
-      </button>
-    </dialog>
     <script src="./scripts/like.js"></script>
   </body>
 </html>

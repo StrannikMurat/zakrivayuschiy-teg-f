@@ -90,6 +90,10 @@
     animation: sparks 0.3s ease-in 0.3s alternate;
   }
 
+  .like-icon .heart {
+    transform-origin: center;
+  }
+
   @keyframes heart {
     from {
       transform: scale(1);
